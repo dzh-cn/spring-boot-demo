@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>my web</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table th:if="${not #lists.isEmpty(list)}" cellpadding="10" border="1">
+        <caption>users :</caption>
+        <tr>
+            <th>id</th>
+            <th>username</th>
+            <th>age</th>
+        </tr>
+        <tr th:each="user: ${list}">
+            <td th:text="${user.id}"/>
+            <td th:text="${user.username}"/>
+            <td th:text="${user.age}"/>
+        </tr>
+    </table>
+</body>
+</html>
