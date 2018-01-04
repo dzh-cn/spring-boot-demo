@@ -1,2 +1,3 @@
 copy ./target/spring-boot-demo.jar D:\www
-start D:\www\startup.bat spring-boot-demo.jar
+cd D:\www
+start startup.bat spring-boot-demo.jar
