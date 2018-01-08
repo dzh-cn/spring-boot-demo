@@ -71,7 +71,35 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 	</build>
 
-
+	<profiles>
+		<profile>
+			<id>local</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/profiles/local</directory>
+						<!--如果希望配置文件放到别处，可加此配置-->
+						<!--<targetPath>conf</targetPath>-->
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>product</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/profiles/product</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+	</profiles>
 </project>
