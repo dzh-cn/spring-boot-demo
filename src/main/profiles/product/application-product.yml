@@ -1,0 +1,14 @@
+server:
+  port : 8088
+spring :
+  jpa :
+    show-sql : true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+  thymeleaf:
+    cache: false
+dubbo:
+  version: 1.0.0
