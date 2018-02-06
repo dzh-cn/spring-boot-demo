@@ -1,5 +1,5 @@
 server:
-  port : 8088
+  port : 80
 spring :
   jpa :
     show-sql : true
@@ -10,5 +10,8 @@ spring :
     platform: h2
   thymeleaf:
     cache: false
+  freemarker:
+    cache: false
+
 dubbo:
   version: 1.0.0

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class BootDemoController {
 
 	@Autowired
@@ -23,6 +23,16 @@ public class BootDemoController {
 	UserService userService;
 
 	Logger logger = LoggerFactory.getLogger(BootDemoController.class);
+
+	@GetMapping("index")
+	String index() {
+		return "index";
+	}
+
+	@GetMapping("index1")
+	String index1() {
+		return "index1";
+	}
 
 	@GetMapping("user/{id}")
 	String getOne(@PathVariable Integer id, Model model) {
