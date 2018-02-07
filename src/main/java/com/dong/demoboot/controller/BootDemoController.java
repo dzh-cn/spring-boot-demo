@@ -29,11 +29,6 @@ public class BootDemoController {
 		return "index";
 	}
 
-	@GetMapping("index1")
-	String index1() {
-		return "index1";
-	}
-
 	@GetMapping("user/{id}")
 	String getOne(@PathVariable Integer id, Model model) {
 		User user = userService.getOne(id);
