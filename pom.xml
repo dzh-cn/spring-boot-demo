@@ -75,6 +75,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<includes>
+						<!--执行所有单元测试，'*'为通配符-->
+						<include>*</include>
+					</includes>
+					<threadCount>2</threadCount>
+				</configuration>
+			</plugin>
 		</plugins>
 		<resources>
 			<resource>
