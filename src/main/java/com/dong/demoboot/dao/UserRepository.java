@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+//	Page<User> findAll(Example<? extends User> ex, Pageable pageable);
 }

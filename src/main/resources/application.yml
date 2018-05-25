@@ -1,5 +1,5 @@
 server:
-  port : 80
+  port : 8060
 spring :
   jpa :
     show-sql : true
@@ -15,3 +15,13 @@ spring :
 
 dubbo:
   version: 1.0.0
+
+logging:
+  level:
+    org: info
+    com: info
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com/demo/task/forkjoin/entity
