@@ -30,9 +30,8 @@ public class ValidatorHello {
         param.param = application;
         Set<ConstraintViolation<Param<Application>>> constraintViolations = validator.validate(param);
         constraintViolations.forEach(e -> System.out.println(String.format("%s: %s", e.getPropertyPath(), e.getMessage())));
-//        Set<ConstraintViolation<Application>> validate = validator.validate(param.param, GroupInsert.class);
-//        validate.forEach(e -> System.out.println(String.format("%s: %s", e.getPropertyPath(), e.getMessage())));
-
+        Set<ConstraintViolation<Application>> validate = validator.validate(param.param, GroupInsert.class);
+        validate.forEach(e -> System.out.println(String.format("%s: %s", e.getPropertyPath(), e.getMessage())));
     }
 
     static class Param<T> {
