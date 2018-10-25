@@ -43,6 +43,7 @@ public class SpringCacheStart {
         Cache cus = cacheManager.getCache("cus");
         logger.info("cache put before: {}", cus.get("name"));
         cus.put("name", "value");
+        cus.get("", Object.class);
         logger.info("cache put after: {}", cus.get("name").get());
     }
 }
