@@ -1,8 +1,7 @@
-package freemarker;
+package com.utils.freemarker;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import freemarker.template.Version;
 import org.apache.poi.util.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
