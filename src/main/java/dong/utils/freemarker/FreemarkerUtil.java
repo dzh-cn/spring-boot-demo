@@ -1,5 +1,6 @@
 package dong.utils.freemarker;
 
+import dong.utils.FileUtil.FileUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.apache.poi.util.IOUtils;
@@ -76,7 +77,7 @@ public abstract class FreemarkerUtil {
     public static void process(Object templateInfo, File targetFile, Object dataModel) {
         FileWriter c = null;
         try {
-            initDir(targetFile);
+            FileUtil.initDir(targetFile);
             c =  new FileWriter(targetFile);
             if(templateInfo instanceof Template) {
                 process((Template) templateInfo, c, dataModel);
@@ -87,23 +88,6 @@ public abstract class FreemarkerUtil {
             throw new RuntimeException(e);
         } finally {
             IOUtils.closeQuietly(c);
-        }
-    }
-
-    /**
-     * 初始化文件
-     * @author: dongzhihua
-     * @time: 2018/9/28 10:57:33
-     */
-    public static void initDir(File file) {
-        File dir = file;
-        if (!file.isDirectory()) {
-            dir = new File(file.getParent());
-        }
-        if (!dir.exists()) {
-            if (!dir.exists()) {
-                dir.mkdirs();
-            }
         }
     }
 }
