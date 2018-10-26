@@ -3,7 +3,7 @@
 <head lang="en">
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-<title>中信银行全付通业务协议书</title>
+<title>XXX服务协议</title>
 <style>
 /* 样式重置，这里只把用到的元素样式重置 */
 html,body,div,p,h4,h6 {
@@ -145,32 +145,8 @@ table {
 	width: 735px;
 }
 
-.letter-spacing-0 {
-	letter-spacing: 0px;
-}
-
 .letter-spacing-1 {
 	letter-spacing: 1px;
-}
-
-.letter-spacing-2 {
-	letter-spacing: 2px;
-}
-
-.letter-spacing-3 {
-	letter-spacing: 3px;
-}
-
-.letter-spacing-4 {
-	letter-spacing: 4px;
-}
-
-.letter-spacing-5 {
-	letter-spacing: 5px;
-}
-
-.letter-spacing-6 {
-	letter-spacing: 6px;
 }
 
 table.rate tr {
@@ -180,6 +156,9 @@ table.rate tr {
 
 .bank_info_table td {
 	padding: 0;
+}
+.customer-border {
+    border: solid #e3e3e3 1px;
 }
 </style>
 </head>
@@ -208,22 +187,44 @@ table.rate tr {
 							</div> <!-- 一级标题 -->
 							<table>
 								<tr>
-									<td class="ui-paper-fir-title">abc</td>
-								</tr>
-								<tr>
-									<td class="ui-paper-fir-title">中文</td>
-								</tr>
-								<tr>
-									<td class="ui-paper-fir-title">中文</td>
-								</tr>
-								<tr>
-									<td class="ui-paper-fir-title">中文</td>
-								</tr>
-								<tr>
-									<td class="ui-paper-fir-title">中文</td>
+									<td class="ui-paper-fir-title">XXX服务协议</td>
 								</tr>
 							</table>
-
+                            <br/>
+                            <p class='indent'>本协议是由网银在线商户（甲方）与网银在线（北京）科技有限公司（以下简称乙方）就网银在线商户使用网银在线服务相关事项所订立的有效合约。您作为网银在线商户，通过网络页面点击确认或以其他双方认可的方式选择接受本协议，即表示甲方与乙方已达成本协议并同意接受本协议的全部约定内容。</p>
+                            <p class='indent letter-spacing-1'>您确认本协议即表示您认可乙方通过向您在填写签约信息时预留的联系邮箱发送的对您所属行业及经营内容的判定，若您对上述所属行业及经营内容的判定或本协议内容有任何异议或不解，请先联系网银在线商户热线（010-89186888）咨询，请勿直接确认本协议。</p>
+                            <h4 class="ui-paper-sec-title">基础条款</h4>
+                            <h4 class="ui-paper-sec-title">一、	定义</h4>
+                            <table>
+                            <tr valign="top">
+                                <td>1.1</td>
+                                <td class="ui-list-td">甲方需向乙方提供乙方要求的包括但不限于相关身份资料及经营内容（如营业执照、税务登记证、组织机构代码证、法定代表人身份证件、被授权人身份证件及授权委托书等）资料，如甲方的经营内容中有需要行政前置审批内容的，则甲方需向乙方提供已通过该前置审批的文件。如以上资料发生任何变更，甲方应在以上资料发生变更后5个工作日内书面通知乙方。甲方应承担因上述资料不准确、不真实、不及时和不完整而产生的一切责任（包括但不限于发票误寄、不能联系导致的业务不能开展、乙方不能识别甲方新的身份发送的指令从而不执行甲方指令）。</td>
+                            </tr>
+                            </table>
+                            <h4 class="ui-paper-sec-title">服务明细：</h4>
+                            <table>
+                                <tr>
+                                    <td class="customer-border" style='width:80px;'rowspan='10'><div class="cell-wrap">
+                                        <b>服务费用</b>（依据甲方选择的资金渠道为收费的标准）
+                                    </div></td>
+                                    <td class="customer-border" style='width:200px;'><div class="cell-wrap">
+                                        <b>资金渠道</b>
+                                    </div></td>
+                                    <td class="sec-col customer-border" colspan='2'><div class="cell-wrap">
+                                        <b>收费标准</b>
+                                    </div></td>
+                                    <td class="sec-col customer-border" colspan='2'><div class="cell-wrap">
+                                        <b>结算周期</b>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td class="customer-border">
+                                        √×借记卡快捷支付
+                                    </td>
+                                    <td class="sec-col customer-border">单笔交易金额的<u> ${(charge.singleRate)!'/'} </u>% </td>
+                                    <td class="sec-col customer-border" colspan='2'>T+<u>${clearingCfgInfo.pledgeDays}</u></td>
+                                </tr>
+                            </table>
 							<table>
 								<tr>
 									<td style="text-align: center;">（本页以下无正文）</td>
