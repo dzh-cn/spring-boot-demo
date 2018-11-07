@@ -34,7 +34,7 @@ public abstract class FreemarkerUtil {
             cfg = new Configuration(Configuration.VERSION_2_3_0);
             cfg.setDirectoryForTemplateLoading(new File("src/main/resources/template"));
         } catch (IOException e) {
-            logger.error("static initializer 出错", e);
+            logger.error("static initializer 出错");
         }
     }
 

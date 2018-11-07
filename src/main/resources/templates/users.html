@@ -10,7 +10,7 @@
 </head>
 <body>
     <table th:if="${not #lists.isEmpty(list)}" cellpadding="10" border="1">
-        <caption>users :</caption>
+        <caption>users : <span th:text="${message}"></span></caption>
         <tr>
             <th>id</th>
             <th>username</th>

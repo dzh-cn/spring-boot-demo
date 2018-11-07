@@ -39,13 +39,15 @@ public class BootDemoController {
 
 	@RequestMapping("/save")
 	String saveOne(User user) {
-		userRepository.save(user);
+//		userRepository.save(user);
+        logger.info("saveOne : {}", user);
 		return "redirect:/users";
 	}
 
 	@GetMapping("users")
-	String pageList(Sort sort, Model model) {
+	String pageList(Sort sort, Model model, String message) {
 		model.addAttribute("list", userRepository.findAll(sort));
+        model.addAttribute("message", message.replaceAll(" ", "`"));
 		return "users";
 	}
 }
