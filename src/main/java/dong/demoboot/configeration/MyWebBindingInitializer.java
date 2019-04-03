@@ -1,10 +1,13 @@
 package dong.demoboot.configeration;
 
+import dong.demoboot.editor.MyDatePropertyEditor;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.support.WebBindingInitializer;
+
+import java.util.Date;
 
 /**
  * WebBindingInitializer
@@ -19,5 +22,8 @@ public class MyWebBindingInitializer implements WebBindingInitializer{
     @InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(String.class,new StringTrimmerEditor(true));
+//        binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
+        String[] patterns = new String[]{"yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm", "yyyy-MM-dd"};
+        binder.registerCustomEditor(Date.class, new MyDatePropertyEditor(patterns));
     }
 }

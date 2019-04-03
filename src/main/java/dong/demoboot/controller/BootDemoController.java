@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Date;
+
 @Controller
 @RequestMapping
 public class BootDemoController {
@@ -45,9 +47,9 @@ public class BootDemoController {
 	}
 
 	@GetMapping("users")
-	String pageList(Sort sort, Model model, String message) {
+	String pageList(Sort sort, Model model, String message, Date birthday) {
 		model.addAttribute("list", userRepository.findAll(sort));
-        model.addAttribute("message", message.replaceAll(" ", "`"));
+        model.addAttribute("birthday", birthday);
 		return "users";
 	}
 }
